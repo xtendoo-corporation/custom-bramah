@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+calatayud_product_import.access_calatayud_product_import,access_calatayud_product_import,calatayud_product_import.model_calatayud_product_import,base.group_user,1,1,1,1

@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* calatayud_product_import
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-04 06:56+0000\n"
+"PO-Revision-Date: 2023-08-04 06:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: calatayud_product_import
+#: model:ir.actions.act_window,name:calatayud_product_import.calatayud_import_product_action
+#: model:ir.ui.menu,name:calatayud_product_import.calatayud_import_product_menuitem
+msgid "Calatayud Import Product"
+msgstr "Importación de productos de Calatayud"
+
+#. module: calatayud_product_import
+#: model:ir.model,name:calatayud_product_import.model_calatayud_product_import
+msgid "Calatayud Product Import"
+msgstr "Importación de productos de Calatayud"
+
+#. module: calatayud_product_import
+#: model_terms:ir.ui.view,arch_db:calatayud_product_import.import_product_wizard_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: calatayud_product_import
+#: model:ir.model.fields,field_description:calatayud_product_import.field_calatayud_product_import__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: calatayud_product_import
+#: model:ir.model.fields,field_description:calatayud_product_import.field_calatayud_product_import__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: calatayud_product_import
+#: model:ir.model.fields,field_description:calatayud_product_import.field_calatayud_product_import__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: calatayud_product_import
+#: model:ir.model.fields,field_description:calatayud_product_import.field_calatayud_product_import__id
+msgid "ID"
+msgstr "ID"
+
+#. module: calatayud_product_import
+#: model_terms:ir.ui.view,arch_db:calatayud_product_import.import_product_wizard_view
+msgid "Import"
+msgstr "Importar"
+
+#. module: calatayud_product_import
+#: model:ir.model.fields,field_description:calatayud_product_import.field_calatayud_product_import__import_file
+msgid "Import File (*.xlsx)"
+msgstr "Importar archivo (*.xlsx)"
+
+#. module: calatayud_product_import
+#: model_terms:ir.ui.view,arch_db:calatayud_product_import.import_product_wizard_view
+msgid "Import Product"
+msgstr "Producto de importación"
+
+#. module: calatayud_product_import
+#. odoo-python
+#: code:addons/calatayud_product_import/wizard/import_product_wizard.py:0
+#, python-format
+msgid "Invalid file style, only .xls or .xlsx file allowed"
+msgstr "Estilo de archivo no válido, solo se permiten archivos .xls o .xlsx"
+
+#. module: calatayud_product_import
+#: model:ir.model.fields,field_description:calatayud_product_import.field_calatayud_product_import____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: calatayud_product_import
+#: model:ir.model.fields,field_description:calatayud_product_import.field_calatayud_product_import__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: calatayud_product_import
+#: model:ir.model.fields,field_description:calatayud_product_import.field_calatayud_product_import__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: calatayud_product_import
+#. odoo-python
+#: code:addons/calatayud_product_import/wizard/import_product_wizard.py:0
+#, python-format
+msgid "Please select Excel file to import"
+msgstr "Seleccione el archivo de Excel para importar"
