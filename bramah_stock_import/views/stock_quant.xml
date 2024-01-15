@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <menuitem
+        id="bramah_import_stock_menuitem"
+        name="Bramah Import Stock"
+        action="bramah_import_stock_action"
+        parent="stock.menu_stock_root"
+        sequence="70"
+    />
+
+</odoo>
+
+
