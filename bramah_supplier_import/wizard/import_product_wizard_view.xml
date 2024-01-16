@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <odoo>
-    <record id="import_product_wizard_view" model="ir.ui.view">
-        <field name="name">import.product.wizard.view</field>
-        <field name="model">calatayud.product.import</field>
+    <record id="import_product_supplier_wizard_view" model="ir.ui.view">
+        <field name="name">import.product.supplier.wizard.view</field>
+        <field name="model">bramah.supplier.import</field>
         <field name="arch" type="xml">
             <form string="Import Product">
                 <group>
@@ -17,9 +17,9 @@
         </field>
     </record>
 
-    <record id="calatayud_import_product_action" model="ir.actions.act_window">
-        <field name="name">Calatayud Import Product</field>
-        <field name="res_model">calatayud.product.import</field>
+    <record id="bramah_import_product_supplier_action" model="ir.actions.act_window">
+        <field name="name">Bramah Import Supplier Info</field>
+        <field name="res_model">bramah.supplier.import</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>

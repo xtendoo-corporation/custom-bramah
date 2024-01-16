@@ -4,7 +4,7 @@
 {
     "name": "Importador de productos y proveedores Bramah",
     "version": "16.0",
-    "author": "Manuel Calero (https://xtendoo.es)",
+    "author": "Manuel Calero, Dani Domínguez (https://xtendoo.es)",
     "category": "Calatayud",
     "license": "AGPL-3",
     "depends": [

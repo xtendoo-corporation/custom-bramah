@@ -4,7 +4,7 @@
     <menuitem
         id="bramah_import_product_menuitem"
         name="Bramah Import Product"
-        action="bramah_import_product_action"
+        action="bramah_import_product_supplier_action"
         parent="sale.menu_sale_config"
         sequence="70"
     />
