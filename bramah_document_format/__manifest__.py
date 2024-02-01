@@ -13,6 +13,7 @@
         "stock",
     ],
     "data": [
+        "views/invoice/invoice_document.xml",
         "views/picking/stock_picking.xml",
     ],
     "installable": True,

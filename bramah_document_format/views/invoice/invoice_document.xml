@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <template id="bramah_document_format.report_invoice_document_inherit"
+                  inherit_id="account.report_invoice_document">
+            <xpath expr='//table[@name="invoice_line_table"]/thead/tr/th[@name="th_taxes"]' position="replace"/>
+            <xpath
+                expr='//table[@name="invoice_line_table"]/tbody/t/tr/t[@name="account_invoice_line_accountable"]/td[5]'
+                position="replace"/>
+            <xpath expr="//div[@name='payment_term']" position="after">
+                <p name="payment_mode" class="mt-12" style="page-break-inside: avoid; font-size: xx-small;">
+                    En cumplimiento de lo previsto en la LO15/99 de protección de Datos de Carácter Personal y el RD
+                    1720/07, reglamento de desarrollo, le informamos que los datos recogidos con la finalidad de llevar
+                    a cobo la gestión contable, fiscal y administrativa así como el envío de comunicaciones comerciales,
+                    publicitarias y promocionales, serán almacenados en el fichero CLIENTE y/o PROVEEDORES titularidad
+                    de BRAMAH SOLUCIONES INDUSTRIALES S.L., el cual se encuentra debidamente inscrito en la Agencia
+                    Española de Protección de Datos. Le informamos que las únicas cesiones de datos previstas serán, en
+                    su caso, las relacionadas a otras Administraciones Públicas cuando proceda, en los términos
+                    previstos en el artículo 21 de la LOPD, las cesiones previstas en la ley de aquellas realizadas con
+                    su consentimiento expreso. Usted podrá, en todo momento, ejercitar los derechos de acceso,
+                    rectificación, cancelación y oposición sobre sus datos personales, así como el de revocación de
+                    consentimiento para cualquiera de las finalidades antes señaladas enviando carta debidamente firmada
+                    a la siguiente dirección, Polígono Industrial El Pino, C/ Pino Central, 24, 41016, Sevilla, donde se
+                    hará constar claramente los datos del contacto a la cual deberá acompañarse fotocopia de su NIF o
+                    documento que acredite su identidad.
+                </p>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
+
