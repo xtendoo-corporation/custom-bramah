@@ -3,16 +3,16 @@
     <data>
         <template id="bramah_document_format.report_delivery_document"
                   inherit_id="stock.report_delivery_document">
-            <xpath expr='//div[@name="signature"]' position="before">
-                <div t-if="o.note" class="mt32 ml64 mr4" name="note">
-                    <div>
-                        <strong>Nota</strong>
-                    </div>
-                    <div>
-                        <p t-field="o.note"/>
-                    </div>
-                </div>
-            </xpath>
+<!--            <xpath expr='//div[@name="signature"]' position="before">-->
+<!--                <div t-if="o.note" class="mt32 ml64 mr4" name="note">-->
+<!--                    <div>-->
+<!--                        <strong>Nota</strong>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <p t-field="o.note"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </xpath>-->
         </template>
     </data>
 </odoo>
