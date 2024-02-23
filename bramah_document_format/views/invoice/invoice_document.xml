@@ -80,6 +80,14 @@
             <xpath
                 expr="//table[@name='invoice_line_table']/tbody/t/tr/t[@name='account_invoice_line_accountable']/td[5]"
                 position="replace"/>
+
+            <xpath expr="//div[@name='payment_communication']" position="after">
+                <div t-field="o.invoice_payment_term_id.note" name="payment_term"/>
+            </xpath>
+
+
+
+
             <!--            <xpath expr="//div[@name='payment_term']" position="after">-->
             <!--                &lt;!&ndash;                <p name="payment_mode" class="mt-12" style="page-break-inside: avoid; font-size: xx-small;">&ndash;&gt;-->
             <!--                &lt;!&ndash;                    En cumplimiento de lo previsto en la LO15/99 de protección de Datos de Carácter Personal y el RD&ndash;&gt;-->
