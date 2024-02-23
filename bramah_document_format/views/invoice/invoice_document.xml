@@ -4,50 +4,50 @@
         <template id="bramah_document_format.report_invoice_document_inherit"
                   inherit_id="account.report_invoice_document">
             <xpath expr="//div[hasclass('row')]" position="replace">
-                <div class="row" style="margin-top: -40px">
+                <div class="row" style="margin-top: -30px">
                     <div class="col-6">
                         <h2>
                             <!--                            <span>Invoice 1</span>-->
-                            <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</span>
-                            <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
-                            <span t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
-                            <span t-if="o.move_type == 'out_refund'">Credit Note</span>
-                            <span t-if="o.move_type == 'in_refund'">Vendor Credit Note</span>
-                            <span t-if="o.move_type == 'in_invoice'">Vendor Bill</span>
+                            <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Factura</span>
+                            <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Factura borrador</span>
+                            <span t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Factura cancelada</span>
+                            <span t-if="o.move_type == 'out_refund'">Factura rectificativa</span>
+                            <span t-if="o.move_type == 'in_refund'">Factura rectificativa proveedor</span>
+                            <span t-if="o.move_type == 'in_invoice'">Factura proveedor</span>
                             <span t-if="o.name != '/'" t-field="o.name"/>
                         </h2>
                         <div class="row mt-4 mb-4">
                             <div class="col-auto col-3 mw-100 mb-2" t-if="o.invoice_date" name="invoice_date">
                                 <t t-if="o.move_type == 'out_invoice'">
-                                    <strong>Invoice Date:</strong>
+                                    <strong>Fecha:</strong>
                                 </t>
                                 <t t-elif="o.move_type == 'out_refund'">
-                                    <strong>Credit Note Date:</strong>
+                                    <strong>Fecha:</strong>
                                 </t>
                                 <t t-elif="o.move_type == 'out_receipt'">
-                                    <strong>Receipt Date:</strong>
+                                    <strong>Fecha recibo:</strong>
                                 </t>
                                 <t t-else="">
-                                    <strong>Date:</strong>
+                                    <strong>Fecha:</strong>
                                 </t>
                                 <p class="m-0" t-field="o.invoice_date"/>
                             </div>
                             <div class="col-auto col-3 mw-100 mb-2"
                                  t-if="o.invoice_date_due and o.move_type == 'out_invoice' and o.state == 'posted'"
                                  name="due_date">
-                                <strong>Due Date:</strong>
+                                <strong>Fecha vencimiento:</strong>
                                 <p class="m-0" t-field="o.invoice_date_due"/>
                             </div>
                             <div class="col-auto col-3 mw-100 mb-2" t-if="o.invoice_origin" name="origin">
-                                <strong>Source:</strong>
+                                <strong>Pedido:</strong>
                                 <p class="m-0" t-field="o.invoice_origin"/>
                             </div>
                             <div class="col-auto col-3 mw-100 mb-2" t-if="o.partner_id.ref" name="customer_code">
-                                <strong>Customer Code:</strong>
+                                <strong>Código cliente:</strong>
                                 <p class="m-0" t-field="o.partner_id.ref"/>
                             </div>
                             <div class="col-auto col-3 mw-100 mb-2" t-if="o.ref" name="reference">
-                                <strong>Reference:</strong>
+                                <strong>Referencia:</strong>
                                 <p class="m-0" t-field="o.ref"/>
                             </div>
                         </div>
@@ -62,14 +62,11 @@
                 </div>
             </xpath>
 
-            <xpath expr="//div[hasclass('page')]//h2" position="replace">
-            </xpath>
+            <xpath expr="//div[hasclass('page')]//h2" position="replace"/>
 
-            <xpath expr="//div[@name='origin']" position="replace">
-            </xpath>
+            <xpath expr="//div[@name='origin']" position="replace"/>
 
-            <xpath expr="//div[@id='informations']" position="replace">
-            </xpath>
+            <xpath expr="//div[@id='informations']" position="replace"/>
 
             <xpath expr="//div[@name='payment_term']" position="replace"/>
 
