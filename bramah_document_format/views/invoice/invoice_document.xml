@@ -7,7 +7,6 @@
                 <div class="row" style="margin-top: -30px">
                     <div class="col-6">
                         <h2>
-                            <!--                            <span>Invoice 1</span>-->
                             <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Factura</span>
                             <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Factura borrador</span>
                             <span t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Factura cancelada</span>
@@ -81,12 +80,10 @@
                 expr="//table[@name='invoice_line_table']/tbody/t/tr/t[@name='account_invoice_line_accountable']/td[5]"
                 position="replace"/>
 
-            <xpath expr="//div[@name='payment_communication']" position="after">
+            <xpath expr="//p[@name='payment_communication']"
+                   position="after">
                 <div t-field="o.invoice_payment_term_id.note" name="payment_term"/>
             </xpath>
-
-
-
 
             <!--            <xpath expr="//div[@name='payment_term']" position="after">-->
             <!--                &lt;!&ndash;                <p name="payment_mode" class="mt-12" style="page-break-inside: avoid; font-size: xx-small;">&ndash;&gt;-->
