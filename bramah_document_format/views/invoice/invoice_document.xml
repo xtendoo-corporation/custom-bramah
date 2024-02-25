@@ -34,7 +34,7 @@
                             <div class="col-auto col-3 mw-100 mb-2"
                                  t-if="o.invoice_date_due and o.move_type == 'out_invoice' and o.state == 'posted'"
                                  name="due_date">
-                                <strong>Fecha vencimiento:</strong>
+                                <strong>Vencimiento:</strong>
                                 <p class="m-0" t-field="o.invoice_date_due"/>
                             </div>
                             <div class="col-auto col-3 mw-100 mb-2" t-if="o.invoice_origin" name="origin">
@@ -50,7 +50,6 @@
                                 <p class="m-0" t-field="o.ref"/>
                             </div>
                         </div>
-                        <div t-field="o.invoice_payment_term_id.note"/>
                     </div>
                     <div class="col-6">
                         <address class="mb-0" t-field="o.partner_id"
@@ -80,9 +79,8 @@
                 expr="//table[@name='invoice_line_table']/tbody/t/tr/t[@name='account_invoice_line_accountable']/td[5]"
                 position="replace"/>
 
-            <xpath expr="//p[@name='payment_communication']"
-                   position="after">
-                <div t-field="o.invoice_payment_term_id.note" name="payment_term"/>
+            <xpath expr="//p[@name='payment_communication']" position="after">
+                <div t-field="o.invoice_payment_term_id.note"/>
             </xpath>
 
             <!--            <xpath expr="//div[@name='payment_term']" position="after">-->
