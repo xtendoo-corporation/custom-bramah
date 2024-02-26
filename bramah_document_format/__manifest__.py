@@ -14,6 +14,7 @@
     ],
     "data": [
         "views/invoice/invoice_document.xml",
+        "views/layout/report_template.xml",
         "views/picking/stock_picking.xml",
     ],
     "installable": True,
