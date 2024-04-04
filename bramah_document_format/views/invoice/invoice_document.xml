@@ -81,6 +81,9 @@
 
             <xpath expr="//p[@name='payment_communication']" position="after">
                 <div t-field="o.invoice_payment_term_id.note"/>
+                <p style="font-weight: bold">IMPORTANTE !!</p>
+                <p style="font-weight: bold">ESTE ES UN EMAIL AUTOMÁTICO Y NO ADMITE RESPUESTA</p>
+                <p style="font-weight: bold">POR FAVOR, DIRIGIR CUALQUIER COMUNICACIÓN RELACIONADA A: pdesus@hdsmetalicas.es</p>
             </xpath>
 
             <!--            <xpath expr="//div[@name='payment_term']" position="after">-->
@@ -105,10 +108,10 @@
             <!--                    GRAL, de SOCIEDADES HOJA NÚMERO SE-121.909 INSCRIPCION 1°-->
             <!--                </p>-->
             <!--            </xpath>-->
-<!--            <p name="inscrita" class="mt-12" style="page-break-inside: avoid; font-size: xx-small;">-->
-<!--                BRAMAH SOLUCIONES INDUSTRIALES, SL. Inscrita en el R. M. SEVILLA, FOLIO 61, TOMO 6179 de la SECC.-->
-<!--                GRAL, de SOCIEDADES HOJA NÚMERO SE-121.909 INSCRIPCION 1°-->
-<!--            </p>-->
+            <!--            <p name="inscrita" class="mt-12" style="page-break-inside: avoid; font-size: xx-small;">-->
+            <!--                BRAMAH SOLUCIONES INDUSTRIALES, SL. Inscrita en el R. M. SEVILLA, FOLIO 61, TOMO 6179 de la SECC.-->
+            <!--                GRAL, de SOCIEDADES HOJA NÚMERO SE-121.909 INSCRIPCION 1°-->
+            <!--            </p>-->
         </template>
     </data>
 </odoo>

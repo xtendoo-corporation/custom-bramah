@@ -14,6 +14,7 @@
     ],
     "data": [
         "views/invoice/invoice_document.xml",
+        "views/sale_order/sale_order_document.xml",
         "views/layout/report_template.xml",
         "views/picking/stock_picking.xml",
     ],
