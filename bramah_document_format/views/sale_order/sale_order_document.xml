@@ -4,9 +4,9 @@
         <template id="bramah_document_format.report_order_document_inherit"
                   inherit_id="sale.report_saleorder_document">
             <xpath expr="//div[hasclass('page')]//div//p[@id='fiscal_position_remark']" position="after">
-                <p style="font-weight: bold">IMPORTANTE !!</p>
-                <p style="font-weight: bold">ESTE ES UN EMAIL AUTOMÁTICO Y NO ADMITE RESPUESTA</p>
-                <p style="font-weight: bold">POR FAVOR, DIRIGIR CUALQUIER COMUNICACIÓN RELACIONADA A: pdesus@hdsmetalicas.es</p>
+<!--                <p style="font-weight: bold">IMPORTANTE !!</p>-->
+<!--                <p style="font-weight: bold">ESTE ES UN EMAIL AUTOMÁTICO Y NO ADMITE RESPUESTA</p>-->
+<!--                <p style="font-weight: bold">POR FAVOR, DIRIGIR CUALQUIER COMUNICACIÓN RELACIONADA A: pdesus@hdsmetalicas.es</p>-->
             </xpath>
         </template>
     </data>
