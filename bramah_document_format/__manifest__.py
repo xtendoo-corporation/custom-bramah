@@ -11,6 +11,7 @@
     "depends": [
         "base",
         "stock",
+        "stock_picking_report_valued",
     ],
     "data": [
         "views/invoice/invoice_document.xml",
