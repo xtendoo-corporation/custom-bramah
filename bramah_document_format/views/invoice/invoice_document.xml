@@ -66,7 +66,7 @@
 
             <xpath expr="//div[@id='informations']" position="replace"/>
 
-            <xpath expr="//div[@name='payment_term']" position="replace"/>
+<!--            <xpath expr="//div[@name='payment_term']" position="replace"/>-->
 
             <xpath expr="//table[@name='invoice_line_table']/thead/tr/th[@name='th_priceunit']" position="replace">
                 <th name="th_priceunit"
@@ -108,4 +108,3 @@
         </template>
     </data>
 </odoo>
-
