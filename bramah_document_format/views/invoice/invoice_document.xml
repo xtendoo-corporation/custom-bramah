@@ -1,6 +1,19 @@
 <?xml version="1.0"?>
 <odoo>
     <data>
+        <template id="report_invoice_document_notes"
+                  inherit_id="account_invoice_report_grouped_by_picking.report_invoice_document">
+            <xpath expr="//span[@t-field='picking.name']" position="after">
+                <t t-set="line_note" t-value="o.get_sale_order_note(picking.sale_id.id)"/>
+                <t t-if="line_note">
+                    <br />
+                    <span>NOTA:<br/>
+                    <span t-raw="line_note"/>
+                    </span>
+                </t>
+            </xpath>
+        </template>
+
         <template id="bramah_document_format.report_invoice_document_inherit"
                   inherit_id="account.report_invoice_document">
             <xpath expr="//div[hasclass('row')]" position="replace">
@@ -59,6 +72,21 @@
                     </div>
                 </div>
             </xpath>
+
+
+
+
+<!--            <t t-if="picking.sale_id">-->
+<!--                            <t t-set="line_note" t-value="get_sale_order_note(picking.sale_id)" />-->
+<!--                            <t t-if="line_note != ''">-->
+<!--                                <span>NOTA:</span><br/>-->
+<!--                                <span t-raw="line_note" />-->
+<!--                            </t>-->
+<!--                        </t>-->
+<!--            -->
+
+
+
 
             <xpath expr="//div[hasclass('page')]//h2" position="replace"/>
 

@@ -12,6 +12,7 @@
         "base",
         "stock",
         "stock_picking_report_valued",
+        "account_invoice_report_grouped_by_picking",
     ],
     "data": [
         "views/invoice/invoice_document.xml",
