@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
-    "name": "Importador de stock Bramah",
+    "name": "Show Payment Term In Tree",
     "version": "16.0",
     "author": "Dani Domínguez(https://xtendoo.es)",
     "category": "Bramah",
