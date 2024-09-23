@@ -17,7 +17,7 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     property_payment_term_id = fields.Many2one('account.payment.term', company_dependent=True,
-                                               string='Customer Payment Terms',
+                                               string='Plazos de pago',
                                                domain="[('company_id', 'in', [current_company_id, False])]",
                                                help="This payment term will be used instead of the default one for sales orders and customer invoices",
                                                tracking=True)
