@@ -9,6 +9,8 @@
     "license": "AGPL-3",
     "depends": [
         "contacts",
+        "account",
+        "sale",
     ],
     "data": [
         "views/res_partner.xml",
