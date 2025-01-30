@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
+         <xpath expr="//div[hasclass('o_boxed_header')]//div[hasclass('text-end')]/div[hasclass('h4')]"
+                position="replace"/>
+
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]//div[hasclass('text-center')]" position="replace">
+            <div class="text-left">
+                <div class="row mb8">
+                    <div class="col-6">
+                        <span>Caixa: ES72 2100 4417 7513 0090 0649</span>
+                    </div>
+                    <div class="col-6 text-end mb4">
+                        <ul class="list-unstyled">
+                            <li><span>Télefono: +34 955 38 71 99</span></li>
+                            <li><span>info@bramah.es</span></li>
+                            <li><span>https://bramah.es</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div t-field="company.report_footer"/>
+                <div t-if="report_type == 'pdf'">
+                    Page: <span class="page"/> / <span class="topage"/>
+                </div>
+                <div t-if="report_type == 'pdf' and display_name_in_footer" class="text-muted">
+                    <span t-field="o.name"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

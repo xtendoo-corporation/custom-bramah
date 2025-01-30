@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <template id="bramah_document_format.report_delivery_document"
+                  inherit_id="stock.report_delivery_document">
+            <xpath expr="//tr[@t-foreach='o.move_line_ids']" position="attributes">
+                 <attribute name="t-foreach">sorted(o.move_line_ids, key=lambda move_line: move_line.move_id.sequence)</attribute>
+                    <attribute name="t-as">move_line</attribute>
+            </xpath>
+            <xpath expr='//div[@name="signature"]' position="before">
+                <div t-if="o.note" class="mt32 ml64 mr4" name="note">
+                    <div>
+                        <strong>Nota</strong>
+                    </div>
+                    <div>
+                        <p t-field="o.note"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="bramah_custom_report_picking" inherit_id="stock_picking_report_valued.valued_report_picking">
+            <xpath
+                expr="//table[@t-if=&quot;o.move_line_ids and o.state==&apos;done&apos;&quot;]/thead/tr/t/th[1]/strong"
+                position="replace"
+            >
+                    <strong>Precio</strong>
+            </xpath>
+            <xpath
+                expr="//table[@t-if=&quot;o.move_line_ids and o.state==&apos;done&apos;&quot;]/thead/tr/t/th[4]"
+                position="replace"
+            />
+        </template>
+
+        <template id="bramah_custom_report_picking_has_serial_move_line"
+                  inherit_id="stock_picking_report_valued.valued_report_picking_has_serial_move_line">
+            <xpath expr="//t[@t-if='o.valued and o.sale_id and o.move_line_ids and is_outgoing']" position="replace">
+                <t t-if="o.valued and o.sale_id and o.move_line_ids and is_outgoing">
+                <td class="text-end"><span t-field="move_line.sale_price_unit" /></td>
+                <td class="text-end" groups="product.group_discount_per_so_line">
+                    <span t-field="move_line.sale_discount" />
+                </td>
+                <td class="text-end"><span
+                        t-field="move_line.sale_price_subtotal"
+                    /></td>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>
