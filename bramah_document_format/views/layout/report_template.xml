@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
-         <xpath expr="//div[hasclass('o_boxed_header')]//div[hasclass('text-end')]/div[hasclass('h4')]"
+         <xpath expr="//div[hasclass('o_boxed_header')]//div[hasclass('text-end')]//div[hasclass('h4')]"
                 position="replace"/>
 
         <xpath expr="//div[contains(@t-attf-class, 'footer')]//div[hasclass('text-center')]" position="replace">

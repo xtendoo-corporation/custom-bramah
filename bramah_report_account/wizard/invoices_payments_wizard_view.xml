@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="invoices_payments_wizard_view" model="ir.ui.view">
+        <field name="name">invoices.payments.wizard.view</field>
+        <field name="model">invoices.payments.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Facturas y Pagos">
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </group>
+                <footer>
+                    <button name="action_print_report" string="Imprimir" type="object" class="oe_highlight"/>
+                    <button string="Cancelar" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_invoices_payments_wizard" model="ir.actions.act_window">
+        <field name="name">Facturas y Pagos</field>
+        <field name="res_model">invoices.payments.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_invoices_payments_report"
+        name="Facturas y Pagos"
+        action="action_invoices_payments_wizard"
+        parent="account.menu_finance_reports"
+        sequence="50"
+    />
+</odoo>

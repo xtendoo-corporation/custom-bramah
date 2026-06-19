@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_invoices_payments">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="wizard">
+                <div class="page">
+                    <div class="article">
+                        <h2 class="text-center mb16 mt32">Facturas y Pagos</h2>
+                        <p class="text-center">
+                            Período:
+                            <span t-field="wizard.date_from"/>
+                            -
+                            <span t-field="wizard.date_to"/>
+                        </p>
+                        <br/>
+
+                        <t t-foreach="lines" t-as="partner_data">
+                            <h3>
+                                <span t-esc="partner_data['partner_name']"/>
+                                <small>(<span t-esc="partner_data['partner_vat']"/>)</small>
+                            </h3>
+                            <table class="table table-sm table-bordered mb32">
+                                <thead>
+                                    <tr>
+                                        <th>Factura</th>
+                                        <th>Fecha Factura</th>
+                                        <th>Total Factura</th>
+                                        <th>Fecha Pago</th>
+                                        <th>Valor Pagado</th>
+                                        <th>Método de Pago</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="partner_data['lines']" t-as="line">
+                                        <tr>
+                                            <td><span t-esc="line['invoice_name']"/></td>
+                                            <td><span t-esc="line['invoice_date']"/></td>
+                                            <td class="text-right"><span t-esc="line['invoice_total']"/></td>
+                                            <td><span t-esc="line['payment_date']"/></td>
+                                            <td class="text-right"><span t-esc="line['payment_amount']"/></td>
+                                            <td><span t-esc="line['payment_method']"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_invoices_payments" model="ir.actions.report">
+        <field name="name">Facturas y Pagos</field>
+        <field name="model">invoices.payments.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">bramah_report_account.report_invoices_payments</field>
+        <field name="report_file">bramah_report_account.report_invoices_payments</field>
+        <field name="print_report_name">'Facturas_y_Pagos_%s' % (time.strftime('%Y%m%d'))</field>
+    </record>
+</odoo>
