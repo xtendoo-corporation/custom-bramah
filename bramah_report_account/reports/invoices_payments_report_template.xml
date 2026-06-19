@@ -15,11 +15,12 @@
                         <br/>
 
                         <t t-foreach="lines" t-as="partner_data">
-                            <h3>
-                                <span t-esc="partner_data['partner_name']"/>
-                                <small>(<span t-esc="partner_data['partner_vat']"/>)</small>
-                            </h3>
-                            <table class="table table-sm table-bordered mb32">
+                            <div style="page-break-inside: avoid;">
+                                <h3>
+                                    <span t-esc="partner_data['partner_name']"/>
+                                    <small>(<span t-esc="partner_data['partner_vat']"/>)</small>
+                                </h3>
+                                <table class="table table-sm table-bordered mb32" style="page-break-inside: avoid;">
                                 <thead>
                                     <tr>
                                         <th>Factura</th>
@@ -27,22 +28,23 @@
                                         <th>Total Factura</th>
                                         <th>Fecha Pago</th>
                                         <th>Valor Pagado</th>
-                                        <th>Método de Pago</th>
+                                        <th>Diario</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <t t-foreach="partner_data['lines']" t-as="line">
-                                        <tr>
+                                        <tr style="page-break-inside: avoid;">
                                             <td><span t-esc="line['invoice_name']"/></td>
                                             <td><span t-esc="line['invoice_date']"/></td>
-                                            <td class="text-right"><span t-esc="line['invoice_total']"/></td>
+                                            <td style="text-align: right;"><span t-esc="line['invoice_total_fmt']"/></td>
                                             <td><span t-esc="line['payment_date']"/></td>
-                                            <td class="text-right"><span t-esc="line['payment_amount']"/></td>
+                                            <td style="text-align: right;"><span t-esc="line['payment_amount_fmt']"/></td>
                                             <td><span t-esc="line['payment_method']"/></td>
                                         </tr>
                                     </t>
                                 </tbody>
                             </table>
+                            </div>
                         </t>
                     </div>
                 </div>

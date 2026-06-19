@@ -13,8 +13,6 @@ class ReportInvoicesPayments(models.AbstractModel):
         wizard = docs[0] if docs else None
 
         lines = []
-        current_partner = False
-        current_invoice = False
 
         if not wizard:
             return {
@@ -75,7 +73,9 @@ class ReportInvoicesPayments(models.AbstractModel):
                 'invoice_total': invoice.amount_total,
                 'payment_date': payment.date,
                 'payment_amount': partial.amount,
-                'payment_method': payment.payment_method_id.name,
+                'payment_method': payment.journal_id.name,
+                'invoice_total_fmt': '{:,.2f} {}'.format(invoice.amount_total, invoice.company_id.currency_id.symbol or ''),
+                'payment_amount_fmt': '{:,.2f} {}'.format(partial.amount, invoice.company_id.currency_id.symbol or ''),
             })
 
         lines = list(partner_map.values())
