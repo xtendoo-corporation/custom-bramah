@@ -24,6 +24,9 @@ class ReportInvoicesPayments(models.AbstractModel):
                 'date_to': False,
             }
 
+        partner_id = wizard.partner_id.id if wizard.partner_id else False
+        journal_id = wizard.journal_id.id if wizard.journal_id else False
+
         payments = self.env['account.payment'].search([
             ('payment_type', '=', 'inbound'),
             ('partner_type', '=', 'customer'),
@@ -56,8 +59,12 @@ class ReportInvoicesPayments(models.AbstractModel):
             invoice = partial.debit_move_id.move_id
             if invoice.move_type != 'out_invoice' or invoice.state != 'posted':
                 continue
+            if partner_id and invoice.commercial_partner_id.id != partner_id:
+                continue
             payment = payment_by_move_id.get(partial.credit_move_id.move_id.id)
             if not payment:
+                continue
+            if journal_id and payment.journal_id.id != journal_id:
                 continue
 
             partner = invoice.commercial_partner_id

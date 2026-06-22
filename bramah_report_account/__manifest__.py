@@ -6,6 +6,7 @@
     "license": "AGPL-3",
     "depends": [
         "account",
+        "report_xlsx",
     ],
     "data": [
         "security/ir.model.access.csv",

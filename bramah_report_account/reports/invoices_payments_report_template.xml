@@ -60,4 +60,12 @@
         <field name="report_file">bramah_report_account.report_invoices_payments</field>
         <field name="print_report_name">'Facturas_y_Pagos_%s' % (time.strftime('%Y%m%d'))</field>
     </record>
+
+    <record id="action_report_invoices_payments_xlsx" model="ir.actions.report">
+        <field name="name">Facturas y Pagos - XLSX</field>
+        <field name="model">invoices.payments.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">bramah_report_account.report_invoices_payments_xlsx</field>
+        <field name="report_file">Facturas_y_Pagos</field>
+    </record>
 </odoo>
